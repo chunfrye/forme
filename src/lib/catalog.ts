@@ -1,11 +1,11 @@
 // Sample catalog. Will move to the database when the admin dashboard is built.
-import active from "@/assets/p-active.jpg";
-import dress from "@/assets/p-dress.jpg";
-import coat from "@/assets/p-coat.jpg";
-import shirt from "@/assets/p-shirt.jpg";
-import blazer from "@/assets/p-blazer.jpg";
-import shoes from "@/assets/p-shoes.jpg";
-import mensActive from "@/assets/p-mens-active.jpg";
+const active = "https://images.pexels.com/photos/6516201/pexels-photo-6516201.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const dress = "https://images.pexels.com/photos/32443160/pexels-photo-32443160.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const coat = "https://images.pexels.com/photos/19354455/pexels-photo-19354455.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const shirt = "https://images.pexels.com/photos/30809030/pexels-photo-30809030.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const blazer = "https://images.pexels.com/photos/36203255/pexels-photo-36203255.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const shoes = "https://images.pexels.com/photos/10352336/pexels-photo-10352336.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const mensActive = "https://images.pexels.com/photos/8401797/pexels-photo-8401797.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
 
 export type Gender = "women" | "men";
 export type Product = {

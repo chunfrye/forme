@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import hero from "@/assets/hero.jpg";
-import dress from "@/assets/p-dress.jpg";
-import active from "@/assets/p-active.jpg";
-import coat from "@/assets/p-coat.jpg";
-import shoes from "@/assets/p-shoes.jpg";
+const hero = "https://images.pexels.com/photos/9148280/pexels-photo-9148280.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const dress = "https://images.pexels.com/photos/32443160/pexels-photo-32443160.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const active = "https://images.pexels.com/photos/6516201/pexels-photo-6516201.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const coat = "https://images.pexels.com/photos/19354455/pexels-photo-19354455.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
+const shoes = "https://images.pexels.com/photos/10352336/pexels-photo-10352336.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
 import { BRANDS, PRODUCTS, slug } from "@/lib/catalog";
 import { ProductCard } from "@/components/product-card";
 import { HowSteps } from "@/components/how-steps";

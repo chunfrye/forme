@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AccountRouteImport } from './routes/account'
 import { Route as BagRouteImport } from './routes/bag'
+import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as BrandsIndexRouteImport } from './routes/brands.index'
@@ -31,6 +32,11 @@ const AccountRoute = AccountRouteImport.update({
 const BagRoute = BagRouteImport.update({
   id: '/bag',
   path: '/bag',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HowItWorksRoute = HowItWorksRouteImport.update({
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
   '/bag': typeof BagRoute
+  '/checkout': typeof CheckoutRoute
   '/how-it-works': typeof HowItWorksRoute
   '/shop': typeof ShopRoute
   '/brands/$slug': typeof BrandsSlugRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
   '/bag': typeof BagRoute
+  '/checkout': typeof CheckoutRoute
   '/how-it-works': typeof HowItWorksRoute
   '/shop': typeof ShopRoute
   '/brands/$slug': typeof BrandsSlugRoute
@@ -84,6 +92,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/account': typeof AccountRoute
   '/bag': typeof BagRoute
+  '/checkout': typeof CheckoutRoute
   '/how-it-works': typeof HowItWorksRoute
   '/shop': typeof ShopRoute
   '/brands/$slug': typeof BrandsSlugRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/account'
     | '/bag'
+    | '/checkout'
     | '/how-it-works'
     | '/shop'
     | '/brands/$slug'
@@ -106,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/account'
     | '/bag'
+    | '/checkout'
     | '/how-it-works'
     | '/shop'
     | '/brands/$slug'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
     | '/'
     | '/account'
     | '/bag'
+    | '/checkout'
     | '/how-it-works'
     | '/shop'
     | '/brands/$slug'
@@ -127,6 +139,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AccountRoute: typeof AccountRoute
   BagRoute: typeof BagRoute
+  CheckoutRoute: typeof CheckoutRoute
   HowItWorksRoute: typeof HowItWorksRoute
   ShopRoute: typeof ShopRoute
   BrandsSlugRoute: typeof BrandsSlugRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/bag'
       fullPath: '/bag'
       preLoaderRoute: typeof BagRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/how-it-works': {
@@ -199,6 +219,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AccountRoute: AccountRoute,
   BagRoute: BagRoute,
+  CheckoutRoute: CheckoutRoute,
   HowItWorksRoute: HowItWorksRoute,
   ShopRoute: ShopRoute,
   BrandsSlugRoute: BrandsSlugRoute,

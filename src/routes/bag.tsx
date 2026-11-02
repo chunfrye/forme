@@ -64,7 +64,7 @@ function Bag() {
         <div className="mt-6 border-t pt-4 text-xs text-muted-foreground">
           Combined retail value {money(retailTotal)} — not charged. You only buy what you keep, directly from the retailer.
         </div>
-        <button disabled className="mt-8 w-full bg-primary py-4 text-xs tracking-[0.2em] text-primary-foreground uppercase opacity-50">Checkout — coming soon</button>
+        <Link to="/checkout" className="mt-8 block w-full bg-primary py-4 text-center text-xs tracking-[0.2em] text-primary-foreground uppercase transition-opacity hover:opacity-90">Continue to checkout</Link>
       </aside>
     </div>
   );
